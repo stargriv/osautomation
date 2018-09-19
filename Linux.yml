@@ -1,0 +1,6 @@
+---
+- hosts: tag_OSType_Linux
+  user: ec2-user
+  tasks:
+    - name: Example for Linux Insance
+      shell: echo "Setting bootstrap configuration for RHEL"

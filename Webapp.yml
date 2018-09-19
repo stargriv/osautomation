@@ -1,0 +1,6 @@
+---
+- hosts: tag_ProductOS_Webapp
+  user: ec2-user
+  tasks:
+    - name: Example for Web Server
+      shell: echo "Pre configuration for Tomcat"
