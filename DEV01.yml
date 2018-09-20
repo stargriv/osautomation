@@ -1,6 +1,0 @@
----
-- hosts: tag_Environment_PPRD01
-  user: ec2-user
-  tasks:
-    - name: Example for Preproduction environment
-      shell: echo "Setting configuration for preproduction environment"
