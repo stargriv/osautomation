@@ -2,5 +2,5 @@
 - hosts: tag_ProductOS_Webapp
   user: ec2-user
   tasks:
-    - name: Example for Development Web Server
-      shell: echo "Pre configuration for Development web server"
+    - name: Example for Preproduction Web Server
+      shell: echo "Pre configuration for Preproduction web server"
