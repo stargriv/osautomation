@@ -3,8 +3,7 @@
   user: ec2-user
   gather_facts: no
   tasks:
-    - name: sleep for 300 seconds and continue with play
-      wait_for: timeout=300
-      delegate_to: localhost
+    - name: Wait for system to become reachable
+      wait_for_connection:
     - name: Example for Linux Development Server
       shell: echo "Setting bootstrap configuration for RHEL Development"
