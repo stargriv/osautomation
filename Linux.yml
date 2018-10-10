@@ -2,9 +2,8 @@
 - hosts: tag_OSType_Linux
   user: ec2-user
   tasks:
-    - name: Wait 300 seconds for port 22 to become open on the host, don't start checking for 10 seconds
-      wait_for:
-        port: 22
-        delay: 10
+    - name: sleep for 300 seconds and continue with play
+      wait_for: timeout=300
+      delegate_to: localhost
     - name: Example for Linux Development Server
       shell: echo "Setting bootstrap configuration for RHEL Development"
