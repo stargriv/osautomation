@@ -4,6 +4,7 @@
   tasks:
     - name: Example for Linux Development Server
       shell: echo "Setting bootstrap configuration for RHEL Development"
-    - name: wait for it to come back up
+    - name: Wait 300 seconds, but only start checking after 60 seconds
       wait_for_connection:
-    - ping:
+  	delay: 60
+        timeout: 300
