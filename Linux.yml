@@ -4,3 +4,6 @@
   tasks:
     - name: Example for Linux Development Server
       shell: echo "Setting bootstrap configuration for RHEL Development"
+    - name: wait for it to come back up
+      wait_for_connection:
+    - ping:
