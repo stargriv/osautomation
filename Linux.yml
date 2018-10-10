@@ -2,7 +2,9 @@
 - hosts: tag_OSType_Linux
   user: ec2-user
   tasks:
-    - name: Wait for instance
-      wait_for_connection:
+    - name: Wait 300 seconds for port 22 to become open on the host, don't start checking for 10 seconds
+      wait_for:
+        port: 22
+        delay: 10
     - name: Example for Linux Development Server
       shell: echo "Setting bootstrap configuration for RHEL Development"
