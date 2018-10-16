@@ -1,6 +1,7 @@
 ---
 - hosts: tag_ProductOS_Tomcat_v8_5_23
   remote_user: ec2-user
+  become: yes
   gather_facts: no
   vars:
     tomcat_version: 8.5.23

@@ -1,6 +1,7 @@
 ---
 - hosts: tag_Environment_DEV01
   user: ec2-user
+  become: yes
   gather_facts: no
   tasks:
     - name: Example for Development environment

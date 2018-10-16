@@ -1,6 +1,7 @@
 ---
 - hosts: tag_OSType_Linux
   user: ec2-user
+  become: yes
   gather_facts: no
   environment:
     http_proxy: http://172.31.13.6:3128
