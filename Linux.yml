@@ -2,8 +2,19 @@
 - hosts: tag_OSType_Linux
   user: ec2-user
   gather_facts: no
+  environment:
+    http_proxy: http://172.31.13.6:3128
+    https_proxy: http://172.31.13.6:3128
+    no_proxy: 169.254.169.254
   tasks:
     - name: Wait for system to become reachable
       wait_for_connection:
     - name: Example for Linux Development Server
       shell: echo "Setting bootstrap configuration for RHEL Development"
+    - name: download get-pip.py
+      get_url: url=https://bootstrap.pypa.io/get-pip.py  dest=/tmp
+    - name: install pip
+      command: "python /tmp/get-pip.py"
+    - name: Install AWS CLI package via Pip
+      pip: name=awscli
+      sudo: yes

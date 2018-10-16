@@ -4,3 +4,5 @@
   tasks:
     - name: Example for Development environment
       shell: echo "Setting configuration for development environment"
+      shell: export S3_BUCKET_NAME=novartisrsbtstinfra001
+      shell: export S3_BUCKET_PREFIX=nerve
