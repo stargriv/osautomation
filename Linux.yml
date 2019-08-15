@@ -3,10 +3,6 @@
   user: ec2-user
   become: yes
   gather_facts: no
-  environment:
-    http_proxy: http://172.31.13.6:3128
-    https_proxy: http://172.31.13.6:3128
-    no_proxy: 169.254.169.254
   tasks:
     - name: Wait for system to become reachable
       wait_for_connection:
