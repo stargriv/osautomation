@@ -1,0 +1,6 @@
+---
+- hosts: tag_ProductOS_Apache2_v2_1_10
+  remote_user: ec2-user
+  become: yes
+  roles:
+    - apache2
