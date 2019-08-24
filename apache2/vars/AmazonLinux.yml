@@ -11,7 +11,6 @@ __apache_packages:
   - httpd24
   - httpd24-devel
   - mod24_ssl
-  - openssh
 
 apache_ports_configuration_items:
   - regexp: "^Listen "
