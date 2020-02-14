@@ -14,4 +14,4 @@
       command: "python /tmp/get-pip.py"
     - name: Install AWS CLI package via Pip
       pip: name=awscli
-      sudo: yes
+      become: yes
